@@ -8,6 +8,7 @@ namespace CanchaFuentes.Formulario
     {
         private decimal precioDia;
         private decimal precioNoche;
+        private string[] reservasRealizadas;
 
         public FormCancha(decimal precioDia, decimal precioNoche)
         {
@@ -23,9 +24,8 @@ namespace CanchaFuentes.Formulario
             // Cargar los horarios y tipos de horario
             CargarHorarios();
             CargarTiposHorario();
+            CargarReservasRealizadas();
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,7 +33,6 @@ namespace CanchaFuentes.Formulario
             formEstadistica.Show();
             this.Hide();
         }
-
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -56,6 +55,20 @@ namespace CanchaFuentes.Formulario
             string horario = comboBoxHorario.SelectedItem.ToString();
             string diaReserva = dateTimePickerDiaReserva.Value.ToShortDateString();
 
+            // Validar si el horario seleccionado es válido para el tipo de horario
+            if (!ValidarHorarioParaTipo(tipoHorario, horario))
+            {
+                MessageBox.Show("El horario seleccionado no es válido para el tipo de horario. Por favor, selecciona un horario correcto.", "Error de Horario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar si ya hay una reserva para el mismo horario en el mismo día
+            if (ReservaExistenteEnMismoHorario(diaReserva, horario))
+            {
+                MessageBox.Show("Ya existe una reserva para el mismo horario en el mismo día. Por favor, selecciona otro horario o día.", "Error de Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Calcular el costo de la reserva según el tipo de horario
             decimal costoReserva = CalcularCostoReserva(tipoHorario);
 
@@ -64,6 +77,47 @@ namespace CanchaFuentes.Formulario
 
             // Guardar los datos de la reserva en un archivo de texto
             GuardarReserva(nombreCliente, telefono, tipoHorario, horario, diaReserva, costoReserva);
+
+            // Mostrar mensaje de reserva realizada con éxito
+            MessageBox.Show("Reserva realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private bool ValidarHorarioParaTipo(string tipoHorario, string horario)
+        {
+            if (tipoHorario == "Dia")
+            {
+                // Validar horarios para el día (de 8:00 AM a 5:00 PM)
+                if (!horario.StartsWith("8") && !horario.StartsWith("9") && !horario.StartsWith("10") && !horario.StartsWith("11") && !horario.StartsWith("12") &&
+                    !horario.StartsWith("13") && !horario.StartsWith("14") && !horario.StartsWith("15") && !horario.StartsWith("16") && !horario.StartsWith("17"))
+                {
+                    return false;
+                }
+            }
+            else if (tipoHorario == "Noche")
+            {
+                // Validar horarios para la noche (de 6:00 PM a 11:00 PM y de 12:00 AM a 7:00 AM)
+                if (!horario.StartsWith("18") && !horario.StartsWith("19") && !horario.StartsWith("20") && !horario.StartsWith("21") && !horario.StartsWith("22") && !horario.StartsWith("23"))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool ReservaExistenteEnMismoHorario(string diaReserva, string horario)
+        {
+            foreach (string reserva in reservasRealizadas)
+            {
+                string[] datosReserva = reserva.Split(',');
+                string diaReservaExistente = datosReserva[4];
+                string horarioReservaExistente = datosReserva[3];
+
+                if (diaReservaExistente == diaReserva && horarioReservaExistente == horario)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private decimal CalcularCostoReserva(string tipoHorario)
@@ -101,20 +155,25 @@ namespace CanchaFuentes.Formulario
 
         private void CargarHorarios()
         {
-            // Agregar horarios de AM
-            for (int hora = 8; hora <= 10; hora++)
-            {
-                comboBoxHorario.Items.Add($"{hora}:00 AM - {hora + 1}:00 AM");
-            }
+            // Limpiar los horarios antes de cargar nuevos
+            comboBoxHorario.Items.Clear();
 
-            // Agregar horario de AM para las 11:00
+            // Agregar horarios
+            comboBoxHorario.Items.Add("8:00 AM - 9:00 AM");
+            comboBoxHorario.Items.Add("9:00 AM - 10:00 AM");
+            comboBoxHorario.Items.Add("10:00 AM - 11:00 AM");
             comboBoxHorario.Items.Add("11:00 AM - 12:00 PM");
-
-            // Agregar horarios de PM
-            for (int hora = 12; hora <= 22; hora++)
-            {
-                comboBoxHorario.Items.Add($"{hora}:00 PM - {hora + 1}:00 PM");
-            }
+            comboBoxHorario.Items.Add("12:00 PM - 1:00 PM");
+            comboBoxHorario.Items.Add("1:00 PM - 2:00 PM");
+            comboBoxHorario.Items.Add("2:00 PM - 3:00 PM");
+            comboBoxHorario.Items.Add("3:00 PM - 4:00 PM");
+            comboBoxHorario.Items.Add("4:00 PM - 5:00 PM");
+            comboBoxHorario.Items.Add("5:00 PM - 6:00 PM");
+            comboBoxHorario.Items.Add("6:00 PM - 7:00 PM");
+            comboBoxHorario.Items.Add("7:00 PM - 8:00 PM");
+            comboBoxHorario.Items.Add("8:00 PM - 9:00 PM");
+            comboBoxHorario.Items.Add("9:00 PM - 10:00 PM");
+            comboBoxHorario.Items.Add("10:00 PM - 11:00 PM");
 
             comboBoxHorario.SelectedIndex = 0; // Seleccionar el primer horario por defecto
         }
@@ -126,28 +185,19 @@ namespace CanchaFuentes.Formulario
             comboBoxTHorario.SelectedIndex = 0; // Seleccionar el primer tipo de horario por defecto
         }
 
-        private void comboBoxTHorario_SelectedIndexChanged(object sender, EventArgs e)
+        private void CargarReservasRealizadas()
         {
-            // Limpiar los horarios al cambiar la selección
-            comboBoxHorario.Items.Clear();
+            string rutaArchivoReservasRealizadas = "ReservasRealizadas.txt";
 
-            // Agregar horarios según la selección de Dia o Noche
-            if (comboBoxTHorario.SelectedItem.ToString() == "Dia")
+            if (File.Exists(rutaArchivoReservasRealizadas))
             {
-                // Agregar horarios de AM para el día
-                for (int hora = 8; hora <= 16; hora++)
-                {
-                    comboBoxHorario.Items.Add($"{hora}:00 AM - {hora + 1}:00 AM");
-                }
+                reservasRealizadas = File.ReadAllLines(rutaArchivoReservasRealizadas);
             }
-            else if (comboBoxTHorario.SelectedItem.ToString() == "Noche")
+            else
             {
-                // Agregar horarios de PM para la noche
-                for (int hora = 18; hora <= 22; hora++)
-                {
-                    comboBoxHorario.Items.Add($"{hora}:00 PM - {hora + 1}:00 PM");
-                }
+                reservasRealizadas = new string[0];
             }
         }
     }
 }
+

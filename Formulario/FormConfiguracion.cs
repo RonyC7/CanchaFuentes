@@ -18,7 +18,6 @@ namespace CanchaFuentes.Formulario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Crear el formulario de la cancha y pasar los precios como parámetros
             FormCancha formCancha = new FormCancha(preciosCancha.PrecioDia, preciosCancha.PrecioNoche);
             formCancha.Show();
             this.Hide();
