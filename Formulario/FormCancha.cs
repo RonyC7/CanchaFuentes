@@ -108,9 +108,6 @@ namespace CanchaFuentes.Formulario
             });
         }
 
-
-
-
         private decimal CalcularCostoReserva(string tipoHorario)
         {
             if (tipoHorario == "Dia")
