@@ -33,12 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDia = new System.Windows.Forms.TextBox();
+            this.txtNoche = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDia = new System.Windows.Forms.Label();
+            this.lblNoche = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,6 +52,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -76,26 +77,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(139, 9);
+            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(181, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 38);
+            this.label3.Size = new System.Drawing.Size(211, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tarifas de la cancha";
             // 
-            // textBox1
+            // txtDia
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtDia.Location = new System.Drawing.Point(92, 233);
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(100, 20);
+            this.txtDia.TabIndex = 4;
             // 
-            // textBox2
+            // txtNoche
             // 
-            this.textBox2.Location = new System.Drawing.Point(420, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtNoche.Location = new System.Drawing.Point(407, 231);
+            this.txtNoche.Name = "txtNoche";
+            this.txtNoche.Size = new System.Drawing.Size(100, 20);
+            this.txtNoche.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -117,23 +119,23 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
+            // lblDia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(114, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.lblDia.AutoSize = true;
+            this.lblDia.Location = new System.Drawing.Point(101, 208);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(35, 13);
+            this.lblDia.TabIndex = 8;
+            this.lblDia.Text = "label4";
             // 
-            // label5
+            // lblNoche
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(438, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
+            this.lblNoche.AutoSize = true;
+            this.lblNoche.Location = new System.Drawing.Point(415, 208);
+            this.lblNoche.Name = "lblNoche";
+            this.lblNoche.Size = new System.Drawing.Size(35, 13);
+            this.lblNoche.TabIndex = 9;
+            this.lblNoche.Text = "label5";
             // 
             // button2
             // 
@@ -143,6 +145,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Guardar Cambios";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormConfiguracion
             // 
@@ -150,12 +153,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 349);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNoche);
+            this.Controls.Add(this.lblDia);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNoche);
+            this.Controls.Add(this.txtDia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -176,12 +179,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDia;
+        private System.Windows.Forms.TextBox txtNoche;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDia;
+        private System.Windows.Forms.Label lblNoche;
         private System.Windows.Forms.Button button2;
     }
 }

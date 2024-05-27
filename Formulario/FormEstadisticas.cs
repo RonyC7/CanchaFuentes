@@ -12,9 +12,22 @@ namespace CanchaFuentes.Formulario
 {
     public partial class FormEstadisticas : Form
     {
-        public FormEstadisticas()
+        private decimal precioDia;
+        private decimal precioNoche;
+
+        public FormEstadisticas(decimal precioDia, decimal precioNoche)
         {
             InitializeComponent();
+            this.precioDia = precioDia;
+            this.precioNoche = precioNoche;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCancha formCancha = new FormCancha(precioDia, precioNoche);
+            formCancha.Show();
+            this.Hide();
         }
     }
+
 }

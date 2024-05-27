@@ -35,26 +35,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.btnRReserva = new System.Windows.Forms.Button();
+            this.comboBoxTHorario = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDiaReserva = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxHorario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(472, 12);
+            this.button1.Location = new System.Drawing.Point(478, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Estadisticas";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -64,13 +68,14 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(365, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(284, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -104,48 +109,49 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Telefono";
             // 
-            // textBox1
+            // txtNCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNCliente.Location = new System.Drawing.Point(142, 88);
+            this.txtNCliente.Name = "txtNCliente";
+            this.txtNCliente.Size = new System.Drawing.Size(200, 20);
+            this.txtNCliente.TabIndex = 6;
             // 
-            // textBox2
+            // txtTelefono
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtTelefono.Location = new System.Drawing.Point(142, 124);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(200, 20);
+            this.txtTelefono.TabIndex = 7;
             // 
-            // button3
+            // btnRReserva
             // 
-            this.button3.Location = new System.Drawing.Point(226, 230);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Realizar reserva";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRReserva.Location = new System.Drawing.Point(533, 299);
+            this.btnRReserva.Name = "btnRReserva";
+            this.btnRReserva.Size = new System.Drawing.Size(116, 23);
+            this.btnRReserva.TabIndex = 8;
+            this.btnRReserva.Text = "Realizar reserva";
+            this.btnRReserva.UseVisualStyleBackColor = true;
+            this.btnRReserva.Click += new System.EventHandler(this.btnRReserva_Click);
             // 
-            // comboBox1
+            // comboBoxTHorario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 160);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 9;
+            this.comboBoxTHorario.FormattingEnabled = true;
+            this.comboBoxTHorario.Location = new System.Drawing.Point(142, 160);
+            this.comboBoxTHorario.Name = "comboBoxTHorario";
+            this.comboBoxTHorario.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxTHorario.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dateTimePickerDiaReserva
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePickerDiaReserva.Location = new System.Drawing.Point(142, 227);
+            this.dateTimePickerDiaReserva.Name = "dateTimePickerDiaReserva";
+            this.dateTimePickerDiaReserva.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDiaReserva.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 167);
+            this.label4.Location = new System.Drawing.Point(41, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 11;
@@ -154,44 +160,74 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 201);
+            this.label5.Location = new System.Drawing.Point(41, 233);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Dia de reserva";
             // 
-            // label6
+            // lblCosto
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(139, 239);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
+            this.lblCosto.AutoSize = true;
+            this.lblCosto.Location = new System.Drawing.Point(139, 271);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(35, 13);
+            this.lblCosto.TabIndex = 13;
+            this.lblCosto.Text = "label6";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(45, 239);
+            this.label7.Location = new System.Drawing.Point(45, 271);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Costo de alquiler";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(353, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 23);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "Configuracion";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 168);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Tipo de horario";
+            // 
+            // comboBoxHorario
+            // 
+            this.comboBoxHorario.FormattingEnabled = true;
+            this.comboBoxHorario.Location = new System.Drawing.Point(142, 196);
+            this.comboBoxHorario.Name = "comboBoxHorario";
+            this.comboBoxHorario.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxHorario.TabIndex = 17;
+            // 
             // FormCancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 276);
+            this.ClientSize = new System.Drawing.Size(663, 325);
+            this.Controls.Add(this.comboBoxHorario);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePickerDiaReserva);
+            this.Controls.Add(this.comboBoxTHorario);
+            this.Controls.Add(this.btnRReserva);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtNCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -215,14 +251,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtNCliente;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Button btnRReserva;
+        private System.Windows.Forms.ComboBox comboBoxTHorario;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDiaReserva;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCosto;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxHorario;
     }
 }
