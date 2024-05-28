@@ -51,9 +51,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(509, 12);
+            this.button1.Location = new System.Drawing.Point(679, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +64,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 14);
+            this.label1.Location = new System.Drawing.Point(49, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 24);
             this.label1.TabIndex = 1;
@@ -71,16 +73,18 @@
             // 
             // dateTimePickerDatosDia
             // 
-            this.dateTimePickerDatosDia.Location = new System.Drawing.Point(41, 63);
+            this.dateTimePickerDatosDia.Location = new System.Drawing.Point(55, 78);
+            this.dateTimePickerDatosDia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePickerDatosDia.Name = "dateTimePickerDatosDia";
-            this.dateTimePickerDatosDia.Size = new System.Drawing.Size(222, 20);
+            this.dateTimePickerDatosDia.Size = new System.Drawing.Size(295, 22);
             this.dateTimePickerDatosDia.TabIndex = 2;
             // 
             // btnMostrarDia
             // 
-            this.btnMostrarDia.Location = new System.Drawing.Point(278, 64);
+            this.btnMostrarDia.Location = new System.Drawing.Point(371, 79);
+            this.btnMostrarDia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMostrarDia.Name = "btnMostrarDia";
-            this.btnMostrarDia.Size = new System.Drawing.Size(129, 23);
+            this.btnMostrarDia.Size = new System.Drawing.Size(172, 28);
             this.btnMostrarDia.TabIndex = 3;
             this.btnMostrarDia.Text = "Mostrar Datos";
             this.btnMostrarDia.UseVisualStyleBackColor = true;
@@ -95,9 +99,10 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridViewDatos.Location = new System.Drawing.Point(39, 107);
+            this.dataGridViewDatos.Location = new System.Drawing.Point(52, 132);
+            this.dataGridViewDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewDatos.Name = "dataGridViewDatos";
-            this.dataGridViewDatos.Size = new System.Drawing.Size(545, 150);
+            this.dataGridViewDatos.Size = new System.Drawing.Size(727, 185);
             this.dataGridViewDatos.TabIndex = 4;
             // 
             // Column1
@@ -127,9 +132,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(449, 263);
+            this.button3.Location = new System.Drawing.Point(599, 324);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 30);
+            this.button3.Size = new System.Drawing.Size(180, 37);
             this.button3.TabIndex = 5;
             this.button3.Text = "Calcular Costo Diario";
             this.button3.UseVisualStyleBackColor = true;
@@ -137,9 +143,10 @@
             // 
             // btnFecha
             // 
-            this.btnFecha.Location = new System.Drawing.Point(449, 352);
+            this.btnFecha.Location = new System.Drawing.Point(599, 490);
+            this.btnFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFecha.Name = "btnFecha";
-            this.btnFecha.Size = new System.Drawing.Size(135, 30);
+            this.btnFecha.Size = new System.Drawing.Size(180, 37);
             this.btnFecha.TabIndex = 6;
             this.btnFecha.Text = "Calcular Costo Total";
             this.btnFecha.UseVisualStyleBackColor = true;
@@ -147,50 +154,57 @@
             // 
             // dtp1
             // 
-            this.dtp1.Location = new System.Drawing.Point(41, 352);
+            this.dtp1.Location = new System.Drawing.Point(55, 433);
+            this.dtp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(200, 20);
+            this.dtp1.Size = new System.Drawing.Size(265, 22);
             this.dtp1.TabIndex = 7;
             // 
             // dtp2
             // 
-            this.dtp2.Location = new System.Drawing.Point(39, 410);
+            this.dtp2.Location = new System.Drawing.Point(52, 505);
+            this.dtp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp2.Name = "dtp2";
-            this.dtp2.Size = new System.Drawing.Size(200, 20);
+            this.dtp2.Size = new System.Drawing.Size(265, 22);
             this.dtp2.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 333);
+            this.label2.Location = new System.Drawing.Point(52, 410);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Fecha de inicio";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 390);
+            this.label3.Location = new System.Drawing.Point(52, 480);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Fecha Fin";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 302);
+            this.label4.Location = new System.Drawing.Point(52, 361);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 13);
+            this.label4.Size = new System.Drawing.Size(160, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Calcular Costo por fechas";
             // 
             // FormEstadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 440);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(799, 542);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -203,7 +217,9 @@
             this.Controls.Add(this.dateTimePickerDatosDia);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormEstadisticas";
             this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatos)).EndInit();
