@@ -53,9 +53,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(478, 12);
+            this.button1.Location = new System.Drawing.Point(637, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Estadisticas";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,9 +65,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(578, 12);
+            this.button2.Location = new System.Drawing.Point(771, 15);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(365, 88);
+            this.pictureBox1.Location = new System.Drawing.Point(487, 108);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 196);
+            this.pictureBox1.Size = new System.Drawing.Size(379, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -87,7 +90,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(28, 12);
+            this.label1.Location = new System.Drawing.Point(37, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 24);
             this.label1.TabIndex = 3;
@@ -97,7 +101,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 88);
+            this.label2.Location = new System.Drawing.Point(55, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 4;
@@ -107,7 +112,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 132);
+            this.label3.Location = new System.Drawing.Point(55, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 5;
@@ -115,49 +121,56 @@
             // 
             // txtNCliente
             // 
-            this.txtNCliente.Location = new System.Drawing.Point(142, 88);
+            this.txtNCliente.Location = new System.Drawing.Point(189, 108);
+            this.txtNCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNCliente.Name = "txtNCliente";
-            this.txtNCliente.Size = new System.Drawing.Size(200, 20);
+            this.txtNCliente.Size = new System.Drawing.Size(265, 22);
             this.txtNCliente.TabIndex = 6;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(142, 124);
+            this.txtTelefono.Location = new System.Drawing.Point(189, 153);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(200, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(265, 22);
             this.txtTelefono.TabIndex = 7;
             // 
             // btnRReserva
             // 
+            this.btnRReserva.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRReserva.Location = new System.Drawing.Point(533, 299);
+            this.btnRReserva.Location = new System.Drawing.Point(711, 368);
+            this.btnRReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRReserva.Name = "btnRReserva";
-            this.btnRReserva.Size = new System.Drawing.Size(116, 23);
+            this.btnRReserva.Size = new System.Drawing.Size(155, 28);
             this.btnRReserva.TabIndex = 8;
             this.btnRReserva.Text = "Realizar reserva";
-            this.btnRReserva.UseVisualStyleBackColor = true;
+            this.btnRReserva.UseVisualStyleBackColor = false;
             this.btnRReserva.Click += new System.EventHandler(this.btnRReserva_Click);
             // 
             // comboBoxTHorario
             // 
             this.comboBoxTHorario.FormattingEnabled = true;
-            this.comboBoxTHorario.Location = new System.Drawing.Point(142, 160);
+            this.comboBoxTHorario.Location = new System.Drawing.Point(189, 197);
+            this.comboBoxTHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxTHorario.Name = "comboBoxTHorario";
-            this.comboBoxTHorario.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxTHorario.Size = new System.Drawing.Size(265, 24);
             this.comboBoxTHorario.TabIndex = 9;
             // 
             // dateTimePickerDiaReserva
             // 
-            this.dateTimePickerDiaReserva.Location = new System.Drawing.Point(142, 227);
+            this.dateTimePickerDiaReserva.Location = new System.Drawing.Point(189, 279);
+            this.dateTimePickerDiaReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePickerDiaReserva.Name = "dateTimePickerDiaReserva";
-            this.dateTimePickerDiaReserva.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDiaReserva.Size = new System.Drawing.Size(265, 22);
             this.dateTimePickerDiaReserva.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 204);
+            this.label4.Location = new System.Drawing.Point(55, 251);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 13);
             this.label4.TabIndex = 11;
@@ -167,7 +180,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 233);
+            this.label5.Location = new System.Drawing.Point(55, 287);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 12;
@@ -176,9 +190,10 @@
             // lblCosto
             // 
             this.lblCosto.AutoSize = true;
-            this.lblCosto.Location = new System.Drawing.Point(139, 271);
+            this.lblCosto.Location = new System.Drawing.Point(185, 334);
+            this.lblCosto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(35, 13);
+            this.lblCosto.Size = new System.Drawing.Size(44, 16);
             this.lblCosto.TabIndex = 13;
             this.lblCosto.Text = "label6";
             // 
@@ -186,7 +201,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(45, 271);
+            this.label7.Location = new System.Drawing.Point(60, 334);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 14;
@@ -195,9 +211,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(353, 12);
+            this.button4.Location = new System.Drawing.Point(471, 15);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 23);
+            this.button4.Size = new System.Drawing.Size(135, 28);
             this.button4.TabIndex = 15;
             this.button4.Text = "Configuracion";
             this.button4.UseVisualStyleBackColor = true;
@@ -207,7 +224,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(41, 168);
+            this.label8.Location = new System.Drawing.Point(55, 207);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 13);
             this.label8.TabIndex = 16;
@@ -216,16 +234,17 @@
             // comboBoxHorario
             // 
             this.comboBoxHorario.FormattingEnabled = true;
-            this.comboBoxHorario.Location = new System.Drawing.Point(142, 196);
+            this.comboBoxHorario.Location = new System.Drawing.Point(189, 241);
+            this.comboBoxHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxHorario.Name = "comboBoxHorario";
-            this.comboBoxHorario.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxHorario.Size = new System.Drawing.Size(265, 24);
             this.comboBoxHorario.TabIndex = 17;
             // 
             // FormCancha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 325);
+            this.ClientSize = new System.Drawing.Size(884, 400);
             this.Controls.Add(this.comboBoxHorario);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
@@ -246,6 +265,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCancha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancha";
