@@ -13,9 +13,10 @@ namespace CanchaFuentes
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
             FormCancha formCancha = new FormCancha(precioDia, precioNoche);
             formCancha.Show();
             this.Hide();

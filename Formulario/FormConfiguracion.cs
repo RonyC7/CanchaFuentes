@@ -16,12 +16,6 @@ namespace CanchaFuentes.Formulario
             CargarPrecios();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormCancha formCancha = new FormCancha(preciosCancha.PrecioDia, preciosCancha.PrecioNoche);
-            formCancha.Show();
-            this.Hide();
-        }
 
         private void CargarPrecios()
         {
@@ -64,7 +58,14 @@ namespace CanchaFuentes.Formulario
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            FormCancha formCancha = new FormCancha(preciosCancha.PrecioDia, preciosCancha.PrecioNoche);
+            formCancha.Show();
+            this.Hide();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtDia.Text, out int nuevoPrecioDia) && int.TryParse(txtNoche.Text, out int nuevoPrecioNoche))
             {

@@ -25,54 +25,6 @@ namespace CanchaFuentes.Formulario
             CargarReservasRealizadas();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormEstadisticas formEstadistica = new FormEstadisticas(precioDia, precioNoche);
-            formEstadistica.Show();
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FormConfiguracion formConfiguracion = new FormConfiguracion();
-            formConfiguracion.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnRReserva_Click(object sender, EventArgs e)
-        {
-            string nombreCliente = txtNCliente.Text;
-            string telefono = txtTelefono.Text;
-            string tipoHorario = comboBoxTHorario.SelectedItem.ToString();
-            string horario = comboBoxHorario.SelectedItem.ToString();
-            string diaReserva = dateTimePickerDiaReserva.Value.ToShortDateString();
-
-            if (!ValidarHorarioParaTipo(tipoHorario, horario))
-            {
-                MessageBox.Show("El horario seleccionado no es válido para el tipo de horario. Por favor, selecciona un horario correcto.", "Error de Horario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (ReservaExistenteEnMismoHorario(diaReserva, horario))
-            {
-                MessageBox.Show("Ya existe una reserva para el mismo horario en el mismo día. Por favor, selecciona otro horario o día.", "Error de Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            decimal costoReserva = CalcularCostoReserva(tipoHorario);
-
-            lblCosto.Text = $"Costo de la reserva: Q{costoReserva}";
-
-            GuardarReserva(nombreCliente, telefono, tipoHorario, horario, diaReserva, costoReserva);
-
-            MessageBox.Show("Reserva realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
 
         private bool ValidarHorarioParaTipo(string tipoHorario, string horario)
         {
@@ -180,6 +132,62 @@ namespace CanchaFuentes.Formulario
             {
                 reservasRealizadas = new string[0];
             }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            FormConfiguracion formConfiguracion = new FormConfiguracion();
+            formConfiguracion.Show();
+            this.Hide();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            FormEstadisticas formEstadistica = new FormEstadisticas(precioDia, precioNoche);
+            formEstadistica.Show();
+            this.Hide();
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            string nombreCliente = txtNCliente.Text;
+            string telefono = txtTelefono.Text;
+            string tipoHorario = comboBoxTHorario.SelectedItem?.ToString(); // Añadido el operador de null-coalescing
+            string horario = comboBoxHorario.SelectedItem?.ToString(); // Añadido el operador de null-coalescing
+            string diaReserva = dateTimePickerDiaReserva.Value.ToShortDateString();
+
+            // Validar que todos los campos estén llenos
+            if (string.IsNullOrEmpty(nombreCliente) || string.IsNullOrEmpty(telefono) || string.IsNullOrEmpty(tipoHorario) || string.IsNullOrEmpty(horario))
+            {
+                MessageBox.Show("Error en la reserva por falta de datos. Por favor, asegúrate de que todos los campos estén llenos.", "Error de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!ValidarHorarioParaTipo(tipoHorario, horario))
+            {
+                MessageBox.Show("El horario seleccionado no es válido para el tipo de horario. Por favor, selecciona un horario correcto.", "Error de Horario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (ReservaExistenteEnMismoHorario(diaReserva, horario))
+            {
+                MessageBox.Show("Ya existe una reserva para el mismo horario en el mismo día. Por favor, selecciona otro horario o día.", "Error de Reserva", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            decimal costoReserva = CalcularCostoReserva(tipoHorario);
+
+            lblCosto.Text = $"Costo de la reserva: Q{costoReserva}";
+
+            GuardarReserva(nombreCliente, telefono, tipoHorario, horario, diaReserva, costoReserva);
+
+            MessageBox.Show("Reserva realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

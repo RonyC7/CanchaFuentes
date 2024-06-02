@@ -15,15 +15,21 @@ namespace CanchaFuentes.Formulario
             this.precioDia = precioDia;
             this.precioNoche = precioNoche;
         }
+   
 
-        private void button1_Click(object sender, EventArgs e)
+        private void rjButton1_Click(object sender, EventArgs e)
         {
             FormCancha formCancha = new FormCancha(precioDia, precioNoche);
             formCancha.Show();
             this.Hide();
         }
 
-        private void btnMostrarDia_Click(object sender, EventArgs e)
+        private void FormEstadisticas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
         {
             string diaSeleccionado = dateTimePickerDatosDia.Value.ToShortDateString();
 
@@ -50,37 +56,7 @@ namespace CanchaFuentes.Formulario
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string diaSeleccionado = dateTimePickerDatosDia.Value.ToShortDateString();
-
-            decimal costoTotal = 0;
-
-            string rutaArchivoReservas = "ReservasRealizadas.txt";
-            if (File.Exists(rutaArchivoReservas))
-            {
-                string[] lineasReservas = File.ReadAllLines(rutaArchivoReservas);
-
-                foreach (string linea in lineasReservas)
-                {
-                    string[] datosReserva = linea.Split(',');
-
-                    if (datosReserva.Length >= 5 && datosReserva[4] == diaSeleccionado)
-                    {
-                        decimal costoReserva = decimal.Parse(datosReserva[5]);
-                        costoTotal += costoReserva;
-                    }
-                }
-
-                MessageBox.Show($"El costo total de las reservas del día es de Q{costoTotal}", "Costo Total del Día", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No hay reservas para calcular el costo total del día.", "Sin Reservas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnFecha_Click(object sender, EventArgs e)
+        private void rjButton3_Click(object sender, EventArgs e)
         {
             DateTime fechaInicio = dtp1.Value.Date;
             DateTime fechaFin = dtp2.Value.Date;
@@ -120,6 +96,35 @@ namespace CanchaFuentes.Formulario
             }
         }
 
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            string diaSeleccionado = dateTimePickerDatosDia.Value.ToShortDateString();
+
+            decimal costoTotal = 0;
+
+            string rutaArchivoReservas = "ReservasRealizadas.txt";
+            if (File.Exists(rutaArchivoReservas))
+            {
+                string[] lineasReservas = File.ReadAllLines(rutaArchivoReservas);
+
+                foreach (string linea in lineasReservas)
+                {
+                    string[] datosReserva = linea.Split(',');
+
+                    if (datosReserva.Length >= 5 && datosReserva[4] == diaSeleccionado)
+                    {
+                        decimal costoReserva = decimal.Parse(datosReserva[5]);
+                        costoTotal += costoReserva;
+                    }
+                }
+
+                MessageBox.Show($"El costo total de las reservas del día es de Q{costoTotal}", "Costo Total del Día", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No hay reservas para calcular el costo total del día.", "Sin Reservas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 

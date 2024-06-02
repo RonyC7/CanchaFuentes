@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfiguracion));
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,28 +38,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblDia = new System.Windows.Forms.Label();
             this.lblNoche = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.rjButton1 = new CanchaFuentes.RJButton();
+            this.rjButton2 = new CanchaFuentes.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(716, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 80);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(74, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 27);
@@ -70,8 +60,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(521, 80);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(479, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 27);
@@ -81,9 +73,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(241, 15);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(181, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(276, 32);
@@ -92,16 +85,16 @@
             // 
             // txtDia
             // 
-            this.txtDia.Location = new System.Drawing.Point(123, 287);
-            this.txtDia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDia.Location = new System.Drawing.Point(81, 288);
+            this.txtDia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(132, 22);
             this.txtDia.TabIndex = 4;
             // 
             // txtNoche
             // 
-            this.txtNoche.Location = new System.Drawing.Point(543, 284);
-            this.txtNoche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNoche.Location = new System.Drawing.Point(501, 285);
+            this.txtNoche.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoche.Name = "txtNoche";
             this.txtNoche.Size = new System.Drawing.Size(132, 22);
             this.txtNoche.TabIndex = 5;
@@ -109,8 +102,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 118);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 119);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,8 +113,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(500, 118);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(458, 119);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(212, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,41 +124,75 @@
             // lblDia
             // 
             this.lblDia.AutoSize = true;
-            this.lblDia.Location = new System.Drawing.Point(135, 256);
+            this.lblDia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.Location = new System.Drawing.Point(93, 257);
             this.lblDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(44, 16);
+            this.lblDia.Size = new System.Drawing.Size(57, 18);
             this.lblDia.TabIndex = 8;
-            this.lblDia.Text = "label4";
+            this.lblDia.Text = "Precio";
             // 
             // lblNoche
             // 
             this.lblNoche.AutoSize = true;
-            this.lblNoche.Location = new System.Drawing.Point(553, 256);
+            this.lblNoche.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoche.Location = new System.Drawing.Point(511, 257);
             this.lblNoche.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoche.Name = "lblNoche";
-            this.lblNoche.Size = new System.Drawing.Size(44, 16);
+            this.lblNoche.Size = new System.Drawing.Size(57, 18);
             this.lblNoche.TabIndex = 9;
-            this.lblNoche.Text = "label5";
+            this.lblNoche.Text = "Precio";
             // 
-            // button2
+            // rjButton1
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(333, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 28);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Guardar Cambios";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.rjButton1.BackColor = System.Drawing.Color.Green;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.Green;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 15;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(283, 279);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(150, 40);
+            this.rjButton1.TabIndex = 11;
+            this.rjButton1.Text = "Guardar Tarifas";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.Green;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.Green;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 15;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(520, 7);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(150, 40);
+            this.rjButton2.TabIndex = 12;
+            this.rjButton2.Text = "Regresar";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // FormConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 430);
-            this.Controls.Add(this.button2);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(685, 383);
+            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.lblNoche);
             this.Controls.Add(this.lblDia);
             this.Controls.Add(this.pictureBox2);
@@ -175,10 +202,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuracion";
@@ -190,8 +216,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -201,6 +225,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblDia;
         private System.Windows.Forms.Label lblNoche;
-        private System.Windows.Forms.Button button2;
+        private RJButton rjButton1;
+        private RJButton rjButton2;
     }
 }
